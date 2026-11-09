@@ -1,0 +1,17 @@
+-- Membuat tabel kasus_dbd_sumbar
+CREATE TABLE IF NOT EXISTS kasus_dbd_sumbar (
+    id SERIAL PRIMARY KEY,
+    kode_kabkot VARCHAR(10) NOT NULL,
+    nama_kabkot VARCHAR(50) NOT NULL,
+    tahun INT NOT NULL,
+    bulan INT NOT NULL CHECK (bulan BETWEEN 1 AND 12),
+    jumlah_kasus INT DEFAULT 0 CHECK (jumlah_kasus >= 0),
+    jumlah_meninggal INT DEFAULT 0 CHECK (jumlah_meninggal >= 0),
+    angka_bebas_jentik_pct DECIMAL(5,2) CHECK (angka_bebas_jentik_pct BETWEEN 0 AND 100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT unique_wilayah_periode UNIQUE (kode_kabkot, tahun, bulan)
+);
+
+-- Indexing untuk optimasi query berdasarkan wilayah dan waktu
+CREATE INDEX idx_kasus_dbd_periode ON kasus_dbd_sumbar (tahun, bulan);
+CREATE INDEX idx_kasus_dbd_kabkot ON kasus_dbd_sumbar (kode_kabkot);
