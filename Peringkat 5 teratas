@@ -1,0 +1,9 @@
+SELECT 
+    nama_kabkot,
+    SUM(jumlah_kasus) AS total_kasus,
+    AVG(angka_bebas_jentik_pct) AS rata_rata_abj
+FROM kasus_dbd_sumbar
+WHERE tahun = 2025
+GROUP BY kode_kabkot, nama_kabkot
+ORDER BY total_kasus DESC
+LIMIT 5;
