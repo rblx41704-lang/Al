@@ -1,0 +1,12 @@
+SELECT 
+    nama_kabkot,
+    SUM(jumlah_kasus) AS total_kasus,
+    SUM(jumlah_meninggal) AS total_meninggal,
+    ROUND(
+        (SUM(jumlah_meninggal)::DECIMAL / NULLIF(SUM(jumlah_kasus), 0)) * 100, 
+        2
+    ) AS cfr_persen
+FROM kasus_dbd_sumbar
+WHERE tahun = 2025
+GROUP BY kode_kabkot, nama_kabkot
+ORDER BY total_kasus DESC;
