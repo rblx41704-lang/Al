@@ -1,0 +1,25 @@
+-- Data Sampel Kasus DBD Sumatera Barat (Periode Januari & Februari 2025)
+INSERT INTO kasus_dbd_sumbar (kode_kabkot, nama_kabkot, tahun, bulan, jumlah_kasus, jumlah_meninggal, angka_bebas_jentik_pct) VALUES
+-- Kota
+('1371', 'Kota Padang', 2025, 1, 65, 1, 86.50),
+('1371', 'Kota Padang', 2025, 2, 72, 2, 84.00),
+('1372', 'Kota Solok', 2025, 1, 14, 0, 91.20),
+('1373', 'Kota Sawahlunto', 2025, 1, 8, 0, 94.50),
+('1374', 'Kota Padang Panjang', 2025, 1, 10, 0, 93.00),
+('1375', 'Kota Bukittinggi', 2025, 1, 22, 0, 90.00),
+('1376', 'Kota Payakumbuh', 2025, 1, 18, 0, 89.50),
+('1377', 'Kota Pariaman', 2025, 1, 15, 0, 88.00),
+
+-- Kabupaten
+('1301', 'Kab. Pesisir Selatan', 2025, 1, 35, 1, 85.00),
+('1302', 'Kab. Solok', 2025, 1, 28, 0, 87.50),
+('1303', 'Kab. Sijunjung', 2025, 1, 19, 0, 89.00),
+('1304', 'Kab. Tanah Datar', 2025, 1, 24, 0, 91.00),
+('1305', 'Kab. Padang Pariaman', 2025, 1, 42, 1, 83.50),
+('1306', 'Kab. Agam', 2025, 1, 38, 0, 88.00),
+('1307', 'Kab. Lima Puluh Kota', 2025, 1, 25, 0, 90.50),
+('1308', 'Kab. Pasaman', 2025, 1, 16, 0, 92.00),
+('1309', 'Kab. Kepulauan Mentawai', 2025, 1, 9, 0, 86.00),
+('1310', 'Kab. Dharmasraya', 2025, 1, 21, 0, 89.20),
+('1311', 'Kab. Solok Selatan', 2025, 1, 12, 0, 91.50),
+('1312', 'Kab. Pasaman Barat', 2025, 1, 31, 1, 84.80);
