@@ -1,0 +1,8 @@
+SELECT 
+    nama_kabkot,
+    tahun,
+    bulan,
+    angka_bebas_jentik_pct
+FROM kasus_dbd_sumbar
+WHERE angka_bebas_jentik_pct < 95.00
+ORDER BY angka_bebas_jentik_pct ASC;
